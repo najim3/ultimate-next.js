@@ -1,10 +1,23 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 
-const SinglePage = ({ params }) => {
-  console.log("params from server component:", params);
-  console.log("params from server component:", params.postId);
+const SinglePost = () => {
+  const [loading, setLoading] = useState(false);
+  const [post, setPost] = useState([]);
 
-  return <div>SinglePage</div>;
+  async function getData() {
+    try {
+      setLoading(true);
+      const data = await fetch("https://dummyjson.com/posts/1");
+      const post = await data.json();
+      console.log("post", post);
+    } catch (error) {}
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+  return <div>SinglePost</div>;
 };
 
-export default SinglePage;
+export default SinglePost;

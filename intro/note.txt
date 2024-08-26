@@ -1,0 +1,2 @@
+use in server component: params, searchParams, redirect
+> use in client component: usePathName, useSearchParams

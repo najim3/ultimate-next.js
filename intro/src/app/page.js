@@ -17,6 +17,7 @@ export default function Home() {
       <Link href={"/profile"}>Link to Profile</Link>
       <Link href={"/posts/1"}>Go to post one</Link>
       <br />
+      <Link href={"/profile"}>Setting</Link>
       <button onClick={handleNavigation}>
         Link to post using useRouter hoooks
       </button>

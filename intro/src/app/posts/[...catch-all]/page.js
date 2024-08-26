@@ -1,6 +1,8 @@
 import React from "react";
 
-const PostAll = () => {
+const PostAll = ({ params }) => {
+  console.log("params", params);
+
   return <div>PostAll</div>;
 };
 

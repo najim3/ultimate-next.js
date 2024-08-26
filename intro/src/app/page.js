@@ -15,6 +15,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Modern Next.js Homepage</h1>
       <Link href={"/profile"}>Link to Profile</Link>
+      <Link href={"/posts/1"}>Go to post one</Link>
       <br />
       <button onClick={handleNavigation}>
         Link to post using useRouter hoooks

@@ -15,7 +15,13 @@ const Post = async ({ searchParams }) => {
   console.log("searchParams from server component:", searchParams);
   console.log("searchParams from server component:", searchParams.search);
 
-  return <div>Post</div>;
+  return (
+    <div>
+      {data.posts.map((post) => (
+        <div key={post.id}>{post.title}</div>
+      ))}
+    </div>
+  );
 };
 
 export default Post;

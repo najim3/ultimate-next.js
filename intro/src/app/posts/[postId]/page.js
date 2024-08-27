@@ -26,6 +26,8 @@ const SinglePost = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  // if (loading) <>bulbul...</>;
   return <div>{post?.title && <div>{post?.title} </div>}</div>;
 };
 

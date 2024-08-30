@@ -1,0 +1,21 @@
+import { Skeleton } from "@/components/ui/skeleton";
+import React from "react";
+
+const Loading = () => {
+  return (
+    <div>
+      <div className="w-10/12 mx-auto pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
+        <Skeleton className="h-[500px] w-[350px] rounded-xl"></Skeleton>
+        <Skeleton className="h-[500px] w-[350px] rounded-xl"></Skeleton>
+        <Skeleton className="h-[500px] w-[350px] rounded-xl"></Skeleton>
+      </div>
+      <div className="w-10/12 mx-auto pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
+        <Skeleton className="h-[500px] w-[350px] rounded-xl"></Skeleton>
+        <Skeleton className="h-[500px] w-[350px] rounded-xl"></Skeleton>
+        <Skeleton className="h-[500px] w-[350px] rounded-xl"></Skeleton>
+      </div>
+    </div>
+  );
+};
+
+export default Loading;

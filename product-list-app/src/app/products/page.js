@@ -14,7 +14,7 @@ async function getProducts() {
 
 const ProductPage = async () => {
   const data = await getProducts();
-  console.log("data", data);
+
   return (
     <div>
       <ProductList productsData={data} />

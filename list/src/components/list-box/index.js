@@ -14,7 +14,9 @@ const ListBox = () => {
         method: "POST",
         body: JSON.stringify(formData),
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log("error", error);
+    }
     // body data = formData
   }
   return (

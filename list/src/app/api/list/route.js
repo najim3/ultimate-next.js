@@ -26,3 +26,30 @@ export async function POST(req) {
     });
   }
 }
+
+// POST request
+
+export async function GET(params) {
+  try {
+    const allList = await prisma.list.findMany({
+      select: {
+        title: true,
+        id: true,
+        description: true,
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
+    if (allList) {
+      return NextResponse.json({
+        success: true,
+        data: allList,
+      });
+    } else {
+      NextResponse.json({ success: false, message: "An error occured" });
+    }
+  } catch (error) {
+    NextResponse.json({ success: false, message: "An error occured" });
+  }
+}

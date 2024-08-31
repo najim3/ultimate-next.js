@@ -6,13 +6,24 @@ const ListBox = () => {
     title: "",
     description: "",
   });
+
+  async function handleSubmit() {
+    // fetch API: POST
+    try {
+      const apiResponse = await fetch("/api/list", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+    } catch (error) {}
+    // body data = formData
+  }
   return (
     <div>
       <form
         className="flex flex-col"
         onSubmit={(e) => {
           e.preventDefault();
-          console.log("formData: ", formData);
+          handleSubmit();
         }}
       >
         <label htmlFor="title">Title</label>
